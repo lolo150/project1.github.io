@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Prénom Nom</title>
+  <meta name="description" content="Portfolio de Prénom Nom : projets, compétences et contact." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <div class="brand">
+        <h1>Prénom Nom</h1>
+        <p>Développeur web • Front-end / Full-stack • Paris</p>
+      </div>
+
+      <div class="toolbar">
+        <input class="input" id="search" placeholder="Rechercher un projet (ex: React, API, Python)..." />
+        <button class="btn" id="themeBtn" type="button">🌗 Thème</button>
+        <a class="btn" href="#contact" style="text-decoration:none;">✉️ Contact</a>
+      </div>
+    </header>
+
+    <!-- ===== À propos ===== -->
+    <section class="section" id="about">
+      <h2>À propos</h2>
+      <p style="margin:0;color:var(--muted);">
+        Je construis des applications web rapides, accessibles et propres. J’aime transformer une idée en produit
+        concret : UI, logique, API, déploiement. Je cherche actuellement <strong>un stage / alternance / CDI</strong>.
+      </p>
+    </section>
+
+    <!-- ===== Compétences ===== -->
+    <section class="section" id="skills">
+      <h2>Compétences</h2>
+      <div class="badges" aria-label="Liste de compétences">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">React</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">Express</span>
+        <span class="badge">MongoDB</span>
+        <span class="badge">Git / GitHub</span>
+        <span class="badge">API REST</span>
+        <span class="badge">Tests</span>
+      </div>
+    </section>
+
+    <!-- ===== Projets ===== -->
+    <section class="section" id="projects">
+      <h2>Projets</h2>
+
+      <div class="grid" role="list">
+        <!-- Projet 1 -->
+        <article class="card" role="listitem">
+          <div class="body">
+            <h3>Todo App</h3>
+            <p class="meta">React • LocalStorage • Responsive</p>
+            <div class="tags" aria-label="Tags">
+              <span class="tag">React</span>
+              <span class="tag">Front</span>
+              <span class="tag">UI</span>
+            </div>
+            <p class="meta">
+              Une todo app rapide avec filtres, persistance, et une UI propre.
+            </p>
+            <div class="links">
+              <a class="link" href="https://github.com/tonpseudo/todo-app" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://tonpseudo.github.io/todo-app/" target="_blank" rel="noreferrer">Démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="card" role="listitem">
+          <div class="body">
+            <h3>API Films</h3>
+            <p class="meta">Node.js • Express • MongoDB</p>
+            <div class="tags" aria-label="Tags">
+              <span class="tag">Back</span>
+              <span class="tag">API</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <p class="meta">
+              API REST avec authentification, CRUD, pagination, et validation.
+            </p>
+            <div class="links">
+              <a class="link" href="https://github.com/tonpseudo/api-films" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Docs</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 3 -->
+        <article class="card" role="listitem">
+          <div class="body">
+            <h3>Dashboard Data</h3>
+            <p class="meta">JavaScript • Charts • Fetch API</p>
+            <div class="tags" aria-label="Tags">
+              <span class="tag">Data</span>
+              <span class="tag">JS</span>
+              <span class="tag">API</span>
+            </div>
+            <p class="meta">
+              Dashboard avec graphiques, recherche, tri et chargement depuis une API.
+            </p>
+            <div class="links">
+              <a class="link" href="https://github.com/tonpseudo/dashboard-data" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://tonpseudo.github.io/dashboard-data/" target="_blank" rel="noreferrer">Démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 4 -->
+        <article class="card" role="listitem">
+          <div class="body">
+            <h3>Landing Page Produit</h3>
+            <p class="meta">HTML • CSS • Accessibilité</p>
+            <div class="tags" aria-label="Tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">A11y</span>
+            </div>
+            <p class="meta">
+              Landing page rapide, responsive, optimisée (SEO de base + accessibilité).
+            </p>
+            <div class="links">
+              <a class="link" href="https://github.com/tonpseudo/landing-page" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://tonpseudo.github.io/landing-page/" target="_blank" rel="noreferrer">Démo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Expérience / Formation (optionnel) ===== -->
+    <section class="section" id="experience">
+      <h2>Expérience & Formation</h2>
+      <div style="display:grid;gap:10px;color:var(--muted);">
+        <div>
+          <strong style="color:var(--text);">2025 — Formation Développeur Web</strong><br />
+          Projets : front (React), back (Node/Express), bases de données, déploiement.
+        </div>
+        <div>
+          <strong style="color:var(--text);">2024 — Projets personnels</strong><br />
+          Portfolio, mini apps, intégration, APIs, bonnes pratiques Git.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="meta" style="margin-top:0;">
+        Dispo pour opportunités. Le plus simple : email ou LinkedIn.
+      </p>
+
+      <div class="links" style="margin-top:10px;">
+        <a class="link" href="mailto:contact@email.com">contact@email.com</a>
+        <a class="link" href="https://www.linkedin.com/in/tonprofil/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="link" href="https://github.com/tonpseudo" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="link" href="./CV.pdf" target="_blank" rel="noreferrer">Télécharger mon CV</a>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <p style="margin:0;">© <span id="year"></span> Prénom Nom — Hébergé sur GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
