@@ -1,67 +1,55 @@
-// Portfolio JS : animations, navigation active et année automatique
 (() => {
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+  const menuBtn = document.querySelector('#menuBtn');
+  const navLinks = document.querySelector('#navLinks');
+  const year = document.querySelector('#year');
+  const searchInput = document.querySelector('#projectSearch');
+  const projectCards = [...document.querySelectorAll('.project-card')];
 
-  // Année automatique dans le footer
-  const yearEl = $("#year");
-  if (yearEl) {
-    yearEl.textContent = String(new Date().getFullYear());
+  if (year) {
+    year.textContent = new Date().getFullYear();
   }
 
-  // Animation d'apparition des blocs au scroll
-  const revealElements = $$([
-    ".hero-card",
-    ".hero-side",
-    ".glass",
-    ".skill-card",
-    ".project",
-    ".timeline-item",
-    ".contact-card"
-  ].join(","));
+  menuBtn?.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
 
-  if ("IntersectionObserver" in window) {
-    revealElements.forEach((el) => {
-      el.classList.add("reveal");
+  navLinks?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn?.setAttribute('aria-expanded', 'false');
     });
+  });
 
-    const revealObserver = new IntersectionObserver((entries) => {
+  const normalize = (value) =>
+    (value || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .trim();
+
+  searchInput?.addEventListener('input', (event) => {
+    const query = normalize(event.target.value);
+
+    projectCards.forEach((card) => {
+      const content = normalize(`${card.innerText} ${card.dataset.search || ''}`);
+      card.classList.toggle('hidden', query.length > 0 && !content.includes(query));
+    });
+  });
+
+  const revealItems = [...document.querySelectorAll('.reveal')];
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       });
     }, { threshold: 0.12 });
 
-    revealElements.forEach((el) => revealObserver.observe(el));
+    revealItems.forEach((item) => observer.observe(item));
   } else {
-    revealElements.forEach((el) => el.classList.add("is-visible"));
-  }
-
-  // Lien de navigation actif selon la section visible
-  const sections = $$('main section[id], header[id]');
-  const navLinks = $$('.nav-links a[href^="#"]');
-
-  function setActiveLink(id) {
-    navLinks.forEach((link) => {
-      link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
-    });
-  }
-
-  if ("IntersectionObserver" in window && sections.length && navLinks.length) {
-    const navObserver = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (visible?.target?.id) {
-        setActiveLink(visible.target.id);
-      }
-    }, {
-      rootMargin: "-30% 0px -55% 0px",
-      threshold: [0.1, 0.25, 0.5]
-    });
-
-    sections.forEach((section) => navObserver.observe(section));
+    revealItems.forEach((item) => item.classList.add('visible'));
   }
 })();
