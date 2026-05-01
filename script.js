@@ -22,23 +22,45 @@
     });
   });
 
+  const modal = document.querySelector('#projectModal');
+  const modalTitle = document.querySelector('#modalTitle');
+  const modalContent = document.querySelector('#modalContent');
+  const closeModalButtons = [...document.querySelectorAll('[data-close-modal]')];
+
+  function openProjectModal(card) {
+    const title = card?.querySelector('h3')?.textContent?.trim() || 'Projet';
+    const details = card?.querySelector('.project-details');
+    const content = details?.innerHTML?.trim();
+
+    if (!modal || !modalTitle || !modalContent || !content) return;
+
+    modalTitle.textContent = title;
+    modalContent.innerHTML = content;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeProjectModal() {
+    if (!modal) return;
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
   detailButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const card = button.closest('.project-card');
-      const details = card?.querySelector('.project-details');
-      if (!details) return;
-
-      const isOpen = !details.hasAttribute('hidden');
-      if (isOpen) {
-        details.setAttribute('hidden', '');
-        button.textContent = 'Voir plus';
-        button.setAttribute('aria-expanded', 'false');
-      } else {
-        details.removeAttribute('hidden');
-        button.textContent = 'Voir moins';
-        button.setAttribute('aria-expanded', 'true');
-      }
+      openProjectModal(card);
     });
+  });
+
+  closeModalButtons.forEach((button) => {
+    button.addEventListener('click', closeProjectModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeProjectModal();
   });
 
   const normalize = (value) =>

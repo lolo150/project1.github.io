@@ -469,33 +469,110 @@ h1 {
 }
 
 .project-details {
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: none;
 }
 
-.project-details:not([hidden]) {
-  display: block;
-  animation: detailsIn 0.22s ease both;
+body.modal-open {
+  overflow: hidden;
 }
 
-.details-grid {
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  place-items: center;
+  padding: 24px;
+}
+
+.project-modal.active {
+  display: grid;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 18, 0.76);
+  backdrop-filter: blur(10px);
+}
+
+.modal-box {
+  position: relative;
+  width: min(860px, 100%);
+  max-height: min(82vh, 760px);
+  overflow-y: auto;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(145deg, rgba(105, 230, 177, 0.12), rgba(117, 167, 255, 0.08)),
+    #121b2d;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  padding: 30px;
+  animation: modalIn 0.22s ease both;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.modal-box h3 {
+  max-width: 720px;
+  margin-bottom: 20px;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  line-height: 1.2;
+}
+
+.modal-content {
+  color: var(--soft);
+}
+
+.modal-content p + p {
+  margin-top: 12px;
+}
+
+.modal-content .details-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
-.details-grid > div,
-.project-card:not(.featured) .project-details {
+.modal-content .details-grid > div,
+.modal-content > p {
   padding: 16px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.10);
   background: rgba(255, 255, 255, 0.045);
 }
 
-@keyframes detailsIn {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
+.modal-content h4 {
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 760px) {
+  .project-modal { padding: 14px; }
+  .modal-box { padding: 24px 18px; border-radius: 22px; }
+  .modal-content .details-grid { grid-template-columns: 1fr; }
 }
 
 .timeline {
