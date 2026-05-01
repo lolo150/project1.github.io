@@ -4,19 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YAKOUBI ALA EDDINE | Portfolio Data Scientist</title>
-  <meta name="description" content="Portfolio professionnel de YAKOUBI ALA EDDINE, étudiant en Data Science, Big Data et IA appliquée." />
+  <meta name="description" content="Portfolio de YAKOUBI ALA EDDINE, étudiant en Data Science, Big Data et IA appliquée." />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header" id="home">
     <nav class="navbar container">
-      <a href="#home" class="brand" aria-label="Accueil">YAKOUBI <span>ALA EDDINE</span></a>
+      <a class="brand" href="#home">YAKOUBI <span>ALA EDDINE</span></a>
 
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
       <div class="nav-links" id="navLinks">
@@ -29,43 +27,33 @@
     </nav>
 
     <section class="hero container">
-      <div class="hero-content reveal">
+      <div class="hero-main reveal">
         <p class="eyebrow">Étudiant en Data Science & Big Data</p>
-        <h1>Je transforme les données en solutions utiles, lisibles et orientées métier.</h1>
+        <h1>Transformer les données en solutions utiles, fiables et orientées métier.</h1>
         <p class="lead">
-          Profil orienté Data Science, Data Engineering et IA appliquée. Je conçois des projets complets :
-          collecte, préparation, modélisation, automatisation, visualisation et restitution claire des résultats.
+          Je développe des projets data complets : collecte, préparation, modélisation, automatisation,
+          visualisation et restitution claire des résultats. Mon objectif est de créer des solutions compréhensibles,
+          exploitables et adaptées aux besoins métier.
         </p>
-
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Voir mes projets</a>
-          <a class="btn btn-secondary" href="#contact">Me contacter</a>
-        </div>
-
-        <div class="hero-stats" aria-label="Points forts">
-          <article>
-            <strong>Python</strong>
-            <span>Automatisation, ML, RAG</span>
-          </article>
-          <article>
-            <strong>Data</strong>
-            <span>ETL, SQL, Snowflake</span>
-          </article>
-          <article>
-            <strong>BI</strong>
-            <span>Streamlit, Power BI</span>
-          </article>
+          <a class="btn primary" href="#projects">Voir mes projets</a>
+          <a class="btn secondary" href="#contact">Me contacter</a>
         </div>
       </div>
 
-      <aside class="hero-card reveal">
+      <aside class="hero-side reveal">
         <div class="avatar">YA</div>
         <h2>Recherche d’alternance</h2>
         <p>
-          Je recherche une alternance en Data Science, Data Engineering ou Analytics afin de contribuer à des
-          projets concrets, fiables et exploitables par les équipes métier.
+          Alternance en Data Science, Data Engineering ou Analytics pour contribuer à des projets concrets
+          autour de la donnée, de l’IA appliquée et de l’aide à la décision.
         </p>
-        <div class="availability">Disponible pour Master 2</div>
+        <div class="mini-stats">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>RAG</span>
+          <span>BI</span>
+        </div>
       </aside>
     </section>
   </header>
@@ -73,30 +61,29 @@
   <main>
     <section class="section container reveal" id="about">
       <div class="section-head">
-        <p class="section-kicker">Profil</p>
+        <p class="kicker">Profil</p>
         <h2>À propos</h2>
       </div>
-      <div class="about-grid">
-        <div class="panel">
+      <div class="two-cols">
+        <article class="panel">
           <p>
-            Je développe des projets data de bout en bout : extraction de données, nettoyage, structuration,
-            analyse, modélisation et création de tableaux de bord. Mon objectif est de transformer des données
-            brutes en indicateurs compréhensibles et utiles à la décision.
+            Je suis étudiant en data avec un intérêt fort pour les projets de bout en bout : extraction,
+            nettoyage, structuration, analyse, modélisation et visualisation de données.
           </p>
-        </div>
-        <div class="panel">
+        </article>
+        <article class="panel">
           <p>
-            Mes projets combinent Python, SQL, Machine Learning, RAG, outils BI et interfaces Streamlit. J’accorde
-            une importance particulière à la qualité des données, à la traçabilité et à la clarté des résultats.
+            J’aime construire des solutions qui relient la technique et l’usage métier : dashboards,
+            pipelines, scoring, IA appliquée, automatisation et analyse décisionnelle.
           </p>
-        </div>
+        </article>
       </div>
     </section>
 
     <section class="section container reveal" id="skills">
       <div class="section-head split">
         <div>
-          <p class="section-kicker">Stack</p>
+          <p class="kicker">Stack</p>
           <h2>Compétences</h2>
         </div>
         <p>Un socle orienté data science, data engineering, IA appliquée et visualisation.</p>
@@ -105,27 +92,19 @@
       <div class="skills-grid">
         <article class="skill-card">
           <h3>Langages</h3>
-          <div class="tags">
-            <span>Python</span><span>SQL</span><span>R</span><span>Java</span>
-          </div>
+          <div class="tags"><span>Python</span><span>SQL</span><span>R</span><span>Java</span></div>
         </article>
         <article class="skill-card">
           <h3>Data Science</h3>
-          <div class="tags">
-            <span>Pandas</span><span>Scikit-learn</span><span>Machine Learning</span><span>NLP</span>
-          </div>
+          <div class="tags"><span>Pandas</span><span>Scikit-learn</span><span>Machine Learning</span><span>NLP</span></div>
         </article>
         <article class="skill-card">
           <h3>Data Engineering</h3>
-          <div class="tags">
-            <span>ETL</span><span>PostgreSQL</span><span>Snowflake</span><span>Docker</span>
-          </div>
+          <div class="tags"><span>ETL</span><span>PostgreSQL</span><span>Snowflake</span><span>Docker</span></div>
         </article>
         <article class="skill-card">
           <h3>IA & BI</h3>
-          <div class="tags">
-            <span>RAG</span><span>ChromaDB</span><span>Ollama</span><span>Streamlit</span><span>Power BI</span>
-          </div>
+          <div class="tags"><span>RAG</span><span>ChromaDB</span><span>Ollama</span><span>Streamlit</span><span>Power BI</span></div>
         </article>
       </div>
     </section>
@@ -133,142 +112,140 @@
     <section class="section container reveal" id="projects">
       <div class="section-head split">
         <div>
-          <p class="section-kicker">Réalisations</p>
+          <p class="kicker">Réalisations</p>
           <h2>Projets sélectionnés</h2>
         </div>
-        <p>Des projets académiques et personnels valorisant la data science, le RAG, le NLP, la BI et la modélisation prédictive.</p>
+        <p>
+          Des projets qui montrent ma capacité à construire, analyser, automatiser et valoriser des données.
+        </p>
       </div>
 
       <div class="project-toolbar">
-        <input id="projectSearch" class="search-input" type="search" placeholder="Rechercher un projet ou une technologie…" aria-label="Rechercher un projet" />
+        <input id="projectSearch" class="search-input" type="search" placeholder="Rechercher un projet ou une technologie…" />
       </div>
 
       <div class="projects-grid" id="projectsGrid">
         <article class="project-card featured" data-search="agent local veille offres emploi rag llm cv matching python ollama chromadb langchain langgraph streamlit pdfplumber france travail">
-          <div class="project-top">
+          <div class="project-header">
             <div>
               <p class="project-meta">Projet personnel · Python, RAG, IA locale et Streamlit</p>
               <h3>Agent local de veille d’offres d’emploi — Matching CV / offres avec RAG et LLM local</h3>
             </div>
-            <span class="project-badge">RAG + IA locale</span>
+            <span class="project-badge">Projet phare</span>
           </div>
-          <p>
+
+          <p class="project-text">
             Conception d’un agent intelligent capable d’analyser automatiquement des offres d’emploi et de mesurer
             leur adéquation avec un ou plusieurs CV PDF. Le système combine extraction de CV, indexation vectorielle,
-            recherche sémantique, scoring hybride et validation par LLM local afin d’identifier les opportunités les
-            plus pertinentes pour un profil data.
+            recherche sémantique, scoring hybride et validation par LLM local pour détecter les opportunités les plus pertinentes.
           </p>
+
           <div class="tags">
             <span>Python</span><span>RAG</span><span>Ollama</span><span>ChromaDB</span><span>LangChain</span><span>LangGraph</span><span>Streamlit</span><span>pdfplumber</span>
           </div>
-          <details>
-            <summary>Voir plus</summary>
-            <div class="details-content">
-              <p>
-                Mise en place d’un pipeline complet : lecture renforcée des CV PDF, découpage en chunks,
-                génération d’embeddings, stockage dans ChromaDB et récupération des extraits les plus pertinents
-                pour comparer automatiquement un CV avec une offre.
-              </p>
-              <p>
-                Développement d’une logique de décision combinant score RAG, analyse LLM via Ollama, seuils de
-                détection et mémoire persistante pour éviter les doublons et conserver l’historique des analyses.
-              </p>
-              <p>
-                Création de deux dashboards Streamlit : un tableau de bord de suivi des offres détectées et une
-                interface Q/R permettant d’interroger les CV en langage naturel.
-              </p>
+
+          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
+
+          <div class="project-details" hidden>
+            <div class="details-grid">
+              <div>
+                <h4>Pipeline RAG</h4>
+                <p>
+                  Lecture renforcée de CV PDF, découpage en chunks, génération d’embeddings et indexation locale dans ChromaDB
+                  afin de retrouver les passages les plus pertinents face à une offre.
+                </p>
+              </div>
+              <div>
+                <h4>Scoring & décision</h4>
+                <p>
+                  Combinaison d’un score RAG, d’une analyse LLM via Ollama, de seuils de décision et d’une mémoire persistante
+                  pour éviter les doublons et historiser les analyses.
+                </p>
+              </div>
+              <div>
+                <h4>Dashboards</h4>
+                <p>
+                  Création de deux interfaces Streamlit : un tableau de bord de suivi des offres détectées et une interface Q/R
+                  permettant d’interroger les CV en langage naturel.
+                </p>
+              </div>
             </div>
-          </details>
+          </div>
         </article>
 
         <article class="project-card" data-search="jo 2028 scoring prediction performances sportives machine learning snowflake dashboard data science analytics">
-          <div class="project-top">
+          <div class="project-header">
             <div>
               <p class="project-meta">En cours · École YNOV Sportives · Aix-en-Provence</p>
               <h3>JO 2028 — Scoring et prédiction de performances sportives</h3>
             </div>
             <span class="project-badge">ML + Analytics</span>
           </div>
-          <p>
-            Projet de data science appliqué à la performance sportive pour estimer le potentiel des athlètes et leur
-            probabilité de médaille aux JO 2028.
+
+          <p class="project-text">
+            Projet de data science appliqué à la performance sportive pour estimer le potentiel des athlètes
+            et leur probabilité de médaille aux JO 2028.
           </p>
-          <div class="tags">
-            <span>Python</span><span>Snowflake</span><span>Machine Learning</span><span>Scoring</span><span>Dashboarding</span>
+
+          <div class="tags"><span>Python</span><span>Snowflake</span><span>Machine Learning</span><span>Scoring</span><span>Dashboarding</span></div>
+
+          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
+          <div class="project-details" hidden>
+            <p>
+              Collecte et centralisation de données olympiques, structuration dans Snowflake, préparation des jeux de données,
+              développement de modèles prédictifs et création de dashboards pour suivre les performances par pays, discipline et genre.
+            </p>
           </div>
-          <details>
-            <summary>Voir plus</summary>
-            <div class="details-content">
-              <p>
-                Collecte et centralisation de données olympiques ouvertes : résultats, médailles, profils d’athlètes,
-                disciplines et pays, avec structuration dans Snowflake.
-              </p>
-              <p>
-                Développement de modèles prédictifs et création de tableaux de bord interactifs pour explorer les
-                performances par pays, discipline et genre.
-              </p>
-            </div>
-          </details>
         </article>
 
         <article class="project-card" data-search="hackathon pipeline big data santé publique streamlit kpi data viz etl dashboard docker">
-          <div class="project-top">
+          <div class="project-header">
             <div>
               <p class="project-meta">Octobre 2025 · École YNOV · Aix-en-Provence</p>
-              <h3>Hackathon Pipeline Big Data — Analyse et visualisation de données de santé publique</h3>
+              <h3>Hackathon Pipeline Big Data — Données de santé publique</h3>
             </div>
             <span class="project-badge">Big Data + BI</span>
           </div>
-          <p>
+
+          <p class="project-text">
             Projet orienté data engineering et analytics centré sur l’intégration, la fiabilisation et la visualisation
             de jeux de données volumineux de santé publique.
           </p>
-          <div class="tags">
-            <span>ETL</span><span>Big Data</span><span>Streamlit</span><span>KPI</span><span>Data Viz</span><span>Docker</span>
+
+          <div class="tags"><span>ETL</span><span>Big Data</span><span>Streamlit</span><span>KPI</span><span>Data Viz</span><span>Docker</span></div>
+
+          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
+          <div class="project-details" hidden>
+            <p>
+              Conception d’un pipeline de traitement pour nettoyer, harmoniser, valider et consolider des données multi-sources.
+              Création de KPI et d’un dashboard interactif pour visualiser les indicateurs dans le temps et par territoire.
+            </p>
           </div>
-          <details>
-            <summary>Voir plus</summary>
-            <div class="details-content">
-              <p>
-                Conception d’un pipeline de traitement pour nettoyer, harmoniser, valider et consolider des données
-                multi-sources sur les hospitalisations, la mortalité et les territoires.
-              </p>
-              <p>
-                Construction de KPI et développement d’un dashboard Streamlit pour visualiser les indicateurs de
-                manière géographique et temporelle.
-              </p>
-            </div>
-          </details>
         </article>
 
         <article class="project-card" data-search="mini site ecommerce intelligent avis clients recommandation nlp sentiment analysis python pipeline inference power bi">
-          <div class="project-top">
+          <div class="project-header">
             <div>
               <p class="project-meta">Mai 2025 – Juillet 2025 · Mini-projet Data</p>
-              <h3>Mini-site e-commerce intelligent — Analyse d’avis clients et recommandation par NLP</h3>
+              <h3>Mini-site e-commerce intelligent — Avis clients et recommandation NLP</h3>
             </div>
-            <span class="project-badge">NLP + Recommandation</span>
+            <span class="project-badge">NLP + Reco</span>
           </div>
-          <p>
-            Projet mêlant développement applicatif, NLP et analyse de données pour exploiter automatiquement les avis
-            clients et améliorer la recommandation produit.
+
+          <p class="project-text">
+            Projet mêlant développement applicatif, NLP et analyse de données pour exploiter automatiquement les avis clients
+            et améliorer la recommandation produit.
           </p>
-          <div class="tags">
-            <span>NLP</span><span>Sentiment Analysis</span><span>Recommendation</span><span>Python</span><span>Inference Pipeline</span>
+
+          <div class="tags"><span>NLP</span><span>Sentiment Analysis</span><span>Recommendation</span><span>Python</span><span>Inference Pipeline</span></div>
+
+          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
+          <div class="project-details" hidden>
+            <p>
+              Collecte et structuration de données produits et textuelles, pipeline NLP, classification de sentiment,
+              recommandation basée sur la similarité textuelle et visualisation des indicateurs clients.
+            </p>
           </div>
-          <details>
-            <summary>Voir plus</summary>
-            <div class="details-content">
-              <p>
-                Collecte, nettoyage et structuration de données produits et textuelles, puis intégration d’un pipeline
-                NLP : tokenisation, lemmatisation, vectorisation et classification de sentiment.
-              </p>
-              <p>
-                Mise en place d’une logique de recommandation basée sur la similarité textuelle et visualisation des
-                indicateurs liés aux avis clients.
-              </p>
-            </div>
-          </details>
         </article>
       </div>
     </section>
@@ -276,7 +253,7 @@
     <section class="section container reveal" id="experience">
       <div class="section-head split">
         <div>
-          <p class="section-kicker">Formation</p>
+          <p class="kicker">Formation</p>
           <h2>Parcours académique</h2>
         </div>
         <p>Un parcours axé sur l’ingénierie des données, l’IA appliquée et la fiabilité des systèmes.</p>
@@ -302,7 +279,7 @@
 
     <section class="section container reveal" id="contact">
       <div class="section-head">
-        <p class="section-kicker">Contact</p>
+        <p class="kicker">Contact</p>
         <h2>Me contacter</h2>
       </div>
 

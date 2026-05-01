@@ -4,6 +4,7 @@
   const year = document.querySelector('#year');
   const searchInput = document.querySelector('#projectSearch');
   const projectCards = [...document.querySelectorAll('.project-card')];
+  const detailButtons = [...document.querySelectorAll('.toggle-details')];
 
   if (year) {
     year.textContent = new Date().getFullYear();
@@ -18,6 +19,25 @@
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuBtn?.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  detailButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.project-card');
+      const details = card?.querySelector('.project-details');
+      if (!details) return;
+
+      const isOpen = !details.hasAttribute('hidden');
+      if (isOpen) {
+        details.setAttribute('hidden', '');
+        button.textContent = 'Voir plus';
+        button.setAttribute('aria-expanded', 'false');
+      } else {
+        details.removeAttribute('hidden');
+        button.textContent = 'Voir moins';
+        button.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
