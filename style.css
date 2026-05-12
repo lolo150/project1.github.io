@@ -412,6 +412,21 @@ h1 {
     linear-gradient(145deg, var(--card), rgba(255, 255, 255, 0.035));
 }
 
+.project-card[data-search*="house prices"] {
+  border-color: rgba(105, 230, 177, 0.22);
+}
+
+.project-card[data-search*="house prices"] .project-badge {
+  color: #06111e;
+  background: linear-gradient(135deg, var(--accent), #9cf6ce);
+  border: none;
+}
+
+.project-card[data-search*="house prices"] .tags span {
+  border-color: rgba(105, 230, 177, 0.30);
+  background: rgba(105, 230, 177, 0.10);
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -468,8 +483,38 @@ h1 {
   transform: translateY(-1px);
 }
 
-.project-details {
+.project-details[hidden] {
   display: none;
+}
+
+.project-details:not([hidden]) {
+  display: block;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.details-grid > div {
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.details-grid h4 {
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.details-grid p {
+  color: var(--soft);
 }
 
 body.modal-open {
@@ -565,14 +610,15 @@ body.modal-open {
 }
 
 @keyframes modalIn {
-  from { opacity: 0; transform: translateY(12px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
 
-@media (max-width: 760px) {
-  .project-modal { padding: 14px; }
-  .modal-box { padding: 24px 18px; border-radius: 22px; }
-  .modal-content .details-grid { grid-template-columns: 1fr; }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .timeline {
@@ -656,7 +702,8 @@ body.modal-open {
     grid-column: 1 / -1;
   }
 
-  .details-grid {
+  .details-grid,
+  .modal-content .details-grid {
     grid-template-columns: 1fr;
   }
 
@@ -704,6 +751,19 @@ body.modal-open {
   .timeline-item {
     flex-direction: column;
     align-items: start;
+  }
+
+  .project-modal {
+    padding: 14px;
+  }
+
+  .modal-box {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+
+  .modal-content .details-grid {
+    grid-template-columns: 1fr;
   }
 }
 
