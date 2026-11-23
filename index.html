@@ -1,367 +1,200 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YAKOUBI ALA EDDINE | Portfolio Data Science & Data Engineering</title>
-  <meta name="description" content="Portfolio de YAKOUBI ALA EDDINE, étudiant en Data Science et Data Engineering." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0c13">
+  <meta name="description" content="Portfolio d'Ala Eddine Yakoubi, étudiant en Master 2 Data & IA : projets en machine learning, RAG, automatisation et data engineering.">
+  <meta property="og:title" content="Ala Eddine Yakoubi — Data Scientist & AI Engineer">
+  <meta property="og:description" content="Data Science, IA générative et Data Engineering. Découvrez mes expériences et projets.">
+  <meta property="og:type" content="website">
+  <title>Ala Eddine Yakoubi — Data Scientist & AI Engineer</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
   <header class="site-header" id="home">
-    <nav class="navbar container">
-      <a class="brand" href="#home">YAKOUBI <span>ALA EDDINE</span></a>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
+    <nav class="nav-wrap container" aria-label="Navigation principale">
+      <a href="#home" class="logo" aria-label="Ala Eddine Yakoubi — Accueil"><span class="logo-icon">AY<span class="logo-dot">.</span></span><span class="logo-name">ALA EDDINE <strong>YAKOUBI</strong></span></a>
       <div class="nav-links" id="navLinks">
         <a href="#about">À propos</a>
-        <a href="#skills">Compétences</a>
+        <a href="#skills">Expertises</a>
+        <a href="#experience">Expériences</a>
         <a href="#projects">Projets</a>
-        <a href="#experience">Parcours</a>
-        <a href="#contact">Contact</a>
+        <a href="#education">Formation</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Activer le thème clair" title="Changer de thème">
+          <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.98 13A9 9 0 0 1 11 3.02 9 9 0 1 0 20.98 13Z"/></svg>
+        </button>
+        <a href="#contact" class="nav-cta">Me contacter <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle icon-btn" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </nav>
-
-    <section class="hero container">
-      <div class="hero-main reveal">
-        <p class="eyebrow">Étudiant en Data Science &amp; Data Engineering</p>
-        <h1>Transformer les données en solutions utiles, fiables et orientées métier.</h1>
-        <p class="lead">
-          Je développe des projets data complets : collecte, préparation, modélisation, automatisation,
-          visualisation et restitution claire des résultats. Mon objectif est de créer des solutions compréhensibles,
-          exploitables et adaptées aux besoins métier.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">Voir mes projets</a>
-          <a class="btn secondary" href="#contact">Me contacter</a>
-        </div>
-      </div>
-
-      <aside class="hero-side reveal">
-        <div class="avatar">YA</div>
-        <h2>Recherche d’alternance</h2>
-        <p>
-          Alternance en Data Science, Data Engineering ou Analytics pour contribuer à des projets concrets
-          autour de la donnée, de l’IA appliquée et de l’aide à la décision.
-        </p>
-        <div class="mini-stats">
-          <span>Python</span>
-          <span>SQL</span>
-          <span>RAG</span>
-          <span>BI</span>
-        </div>
-      </aside>
-    </section>
   </header>
 
-  <main>
-    <section class="section container reveal" id="about">
-      <div class="section-head">
-        <p class="kicker">Profil</p>
-        <h2>À propos</h2>
-      </div>
-      <div class="two-cols">
-        <article class="panel">
-          <p>
-            Je suis étudiant en data avec un intérêt fort pour les projets de bout en bout : extraction,
-            nettoyage, structuration, analyse, modélisation et visualisation de données.
-          </p>
-        </article>
-        <article class="panel">
-          <p>
-            J’aime construire des solutions qui relient la technique et l’usage métier : dashboards,
-            pipelines, scoring, IA appliquée, automatisation et analyse décisionnelle.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container reveal" id="skills">
-      <div class="section-head split">
-        <div>
-          <p class="kicker">Stack</p>
-          <h2>Compétences</h2>
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="availability"><span class="availability-pulse"></span> À la recherche d’un stage de fin d’études · 6 mois</div>
+        <p class="overline"><span class="overline-num">01 /</span> DATA SCIENCE · AI ENGINEERING · DATA SYSTEMS</p>
+        <h1 id="hero-title">Des données<br>aux <span class="gradient-text">décisions.</span><br>De l’IA à <em>l’impact.</em></h1>
+        <p class="hero-description">Je suis <strong>Ala Eddine Yakoubi</strong>, étudiant en <strong>Master 2 Data & IA à YNOV Aix-en-Provence</strong>. Je conçois des pipelines fiables, des modèles de machine learning et des applications d’IA générative qui répondent à de vrais besoins métier.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explorer mes projets <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline" href="#experience">Mon parcours <span aria-hidden="true">↓</span></a>
         </div>
-        <p>Un socle orienté data science, data engineering, IA appliquée et visualisation.</p>
+        <div class="hero-links"><span>Retrouvez-moi</span><a href="https://www.linkedin.com/in/ala-eddine-yakoubi-875544259/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/lolo150?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       </div>
-
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Langages</h3>
-          <div class="tags"><span>Python</span><span>SQL</span><span>R</span><span>Java</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>Data Science</h3>
-          <div class="tags"><span>Pandas</span><span>Scikit-learn</span><span>Machine Learning</span><span>NLP</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>Data Engineering</h3>
-          <div class="tags"><span>ETL</span><span>PostgreSQL</span><span>Snowflake</span><span>Docker</span></div>
-        </article>
-        <article class="skill-card">
-          <h3>IA & BI</h3>
-          <div class="tags"><span>RAG</span><span>ChromaDB</span><span>Ollama</span><span>Streamlit</span><span>Power BI</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container reveal" id="projects">
-      <div class="section-head split">
-        <div>
-          <p class="kicker">Réalisations</p>
-          <h2>Projets sélectionnés</h2>
+      <div class="hero-visual reveal" aria-label="Visualisation de mon pipeline data et des performances du projet CRSICT">
+        <div class="visual-topline"><span><span class="terminal-dot"></span> DATA / SYSTEM OVERVIEW</span><span>PORTFOLIO — 2026</span></div>
+        <div class="visual-title"><span>Du signal au résultat</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 16l5-6 4 3 7-8"/><path d="M15 5h5v5"/></svg></div>
+        <div class="flow-diagram">
+          <div class="flow-node source"><span class="node-icon">01</span><span><b>RAW</b><small>Ingestion</small></span></div>
+          <div class="flow-path" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="flow-node process"><span class="node-icon">02</span><span><b>STAGING</b><small>Qualité</small></span></div>
+          <div class="flow-path" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="flow-node source"><span class="node-icon">03</span><span><b>DATA WAREHOUSE</b><small>Structuration</small></span></div>
+          <div class="flow-path" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="flow-node result"><span class="node-icon">04</span><span><b>ML + BI</b><small>Décision</small></span></div>
         </div>
-        <p>
-          Des projets qui montrent ma capacité à construire, analyser, automatiser et valoriser des données.
-        </p>
-      </div>
-
-      <div class="project-toolbar">
-        <input id="projectSearch" class="search-input" type="search" placeholder="Rechercher un projet ou une technologie…" />
-      </div>
-
-      <div class="projects-grid" id="projectsGrid">
-        <article class="project-card featured" data-search="agent local veille offres emploi rag llm cv matching python ollama chromadb langchain langgraph streamlit pdfplumber france travail">
-          <div class="project-header">
-            <div>
-              <p class="project-meta">Projet personnel · Python, RAG, IA locale et Streamlit</p>
-              <h3>Agent local de veille d’offres d’emploi — Matching CV / offres avec RAG et LLM local</h3>
-            </div>
-            <span class="project-badge">Projet phare</span>
-          </div>
-
-          <p class="project-text">
-            Conception d’un agent intelligent capable d’analyser automatiquement des offres d’emploi et de mesurer
-            leur adéquation avec un ou plusieurs CV PDF. Le système combine extraction de CV, indexation vectorielle,
-            recherche sémantique, scoring hybride et validation par LLM local pour détecter les opportunités les plus pertinentes.
-          </p>
-
-          <div class="tags">
-            <span>Python</span><span>RAG</span><span>Ollama</span><span>ChromaDB</span><span>LangChain</span><span>LangGraph</span><span>Streamlit</span><span>pdfplumber</span>
-          </div>
-
-          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
-
-          <div class="project-details" hidden>
-            <div class="details-grid">
-              <div>
-                <h4>Pipeline RAG</h4>
-                <p>
-                  Lecture renforcée de CV PDF, découpage en chunks, génération d’embeddings et indexation locale dans ChromaDB
-                  afin de retrouver les passages les plus pertinents face à une offre.
-                </p>
-              </div>
-              <div>
-                <h4>Scoring & décision</h4>
-                <p>
-                  Combinaison d’un score RAG, d’une analyse LLM via Ollama, de seuils de décision et d’une mémoire persistante
-                  pour éviter les doublons et historiser les analyses.
-                </p>
-              </div>
-              <div>
-                <h4>Dashboards</h4>
-                <p>
-                  Création de deux interfaces Streamlit : un tableau de bord de suivi des offres détectées et une interface Q/R
-                  permettant d’interroger les CV en langage naturel.
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-search="house prices kaggle competition regression machine learning python pandas scikit learn ridge random forest xgboost kfold target encoding standardscaler rmse log data cleaning feature engineering">
-          <div class="project-header">
-            <div>
-              <p class="project-meta">Projet Kaggle · Python, Machine Learning et régression</p>
-              <h3>House Prices — Kaggle Competition</h3>
-            </div>
-            <span class="project-badge">Regression ML</span>
-          </div>
-
-          <p class="project-text">
-            Projet de machine learning réalisé à partir de la compétition Kaggle House Prices, avec pour objectif
-            de prédire le prix de vente de maisons à partir de leurs caractéristiques : surface, qualité générale,
-            quartier, garage, sous-sol, année de construction et équipements.
-          </p>
-
-          <div class="tags">
-            <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>EDA</span><span>K-Fold Target Encoding</span><span>Ridge</span><span>Random Forest</span><span>XGBoost</span>
-          </div>
-
-          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
-
-          <div class="project-details" hidden>
-            <div class="details-grid">
-              <div>
-                <h4>Analyse & préparation des données</h4>
-                <p>
-                  Réalisation d’une analyse exploratoire complète : compréhension de la cible SalePrice,
-                  étude des variables numériques et catégorielles, détection des valeurs manquantes,
-                  vérification des doublons, valeurs extrêmes, incohérences et risques de data leakage.
-                </p>
-              </div>
-              <div>
-                <h4>Preprocessing</h4>
-                <p>
-                  Traitement logique des valeurs manquantes, encodage des variables catégorielles avec K-Fold Target Encoding,
-                  imputation des valeurs restantes et standardisation des variables afin de préparer un jeu de données propre
-                  et exploitable par les modèles de régression.
-                </p>
-              </div>
-              <div>
-                <h4>Modélisation & évaluation</h4>
-                <p>
-                  Entraînement et comparaison de plusieurs modèles de régression comme Ridge, Random Forest et XGBoost.
-                  Évaluation avec la métrique officielle de la compétition : RMSE entre le logarithme des prix prédits
-                  et le logarithme des prix réels, puis génération d’un fichier submission.csv pour Kaggle.
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-search="jo 2028 scoring prediction performances sportives machine learning snowflake dashboard data science analytics">
-          <div class="project-header">
-            <div>
-              <p class="project-meta">En cours · École YNOV Sportives · Aix-en-Provence</p>
-              <h3>JO 2028 — Scoring et prédiction de performances sportives</h3>
-            </div>
-            <span class="project-badge">ML + Analytics</span>
-          </div>
-
-          <p class="project-text">
-            Projet de data science appliqué à la performance sportive pour estimer le potentiel des athlètes
-            et leur probabilité de médaille aux JO 2028.
-          </p>
-
-          <div class="tags"><span>Python</span><span>Snowflake</span><span>Machine Learning</span><span>Scoring</span><span>Dashboarding</span></div>
-
-          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
-          <div class="project-details" hidden>
-            <p>
-              Collecte et centralisation de données olympiques, structuration dans Snowflake, préparation des jeux de données,
-              développement de modèles prédictifs et création de dashboards pour suivre les performances par pays, discipline et genre.
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card" data-search="hackathon pipeline big data santé publique streamlit kpi data viz etl dashboard docker">
-          <div class="project-header">
-            <div>
-              <p class="project-meta">Octobre 2025 · École YNOV · Aix-en-Provence</p>
-              <h3>Hackathon Pipeline Big Data — Données de santé publique</h3>
-            </div>
-            <span class="project-badge">Big Data + BI</span>
-          </div>
-
-          <p class="project-text">
-            Projet orienté data engineering et analytics centré sur l’intégration, la fiabilisation et la visualisation
-            de jeux de données volumineux de santé publique.
-          </p>
-
-          <div class="tags"><span>ETL</span><span>Big Data</span><span>Streamlit</span><span>KPI</span><span>Data Viz</span><span>Docker</span></div>
-
-          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
-          <div class="project-details" hidden>
-            <p>
-              Conception d’un pipeline de traitement pour nettoyer, harmoniser, valider et consolider des données multi-sources.
-              Création de KPI et d’un dashboard interactif pour visualiser les indicateurs dans le temps et par territoire.
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card" data-search="mini site ecommerce intelligent avis clients recommandation nlp sentiment analysis python pipeline inference power bi">
-          <div class="project-header">
-            <div>
-              <p class="project-meta">Mai 2025 – Juillet 2025 · Mini-projet Data</p>
-              <h3>Mini-site e-commerce intelligent — Avis clients et recommandation NLP</h3>
-            </div>
-            <span class="project-badge">NLP + Reco</span>
-          </div>
-
-          <p class="project-text">
-            Projet mêlant développement applicatif, NLP et analyse de données pour exploiter automatiquement les avis clients
-            et améliorer la recommandation produit.
-          </p>
-
-          <div class="tags"><span>NLP</span><span>Sentiment Analysis</span><span>Recommendation</span><span>Python</span><span>Inference Pipeline</span></div>
-
-          <button class="toggle-details" type="button" aria-expanded="false">Voir plus</button>
-          <div class="project-details" hidden>
-            <p>
-              Collecte et structuration de données produits et textuelles, pipeline NLP, classification de sentiment,
-              recommandation basée sur la similarité textuelle et visualisation des indicateurs clients.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container reveal" id="experience">
-      <div class="section-head split">
-        <div>
-          <p class="kicker">Formation</p>
-          <h2>Parcours académique</h2>
+        <div class="visual-divider"></div>
+        <div class="visual-bottom">
+          <div class="visual-metric"><span class="metric-label">CRSICT / Rappel ML · T1_NOV</span><strong>94,42<span>%</span></strong><span class="metric-note"><span class="metric-dot"></span> Validation temporelle</span></div>
+          <div class="data-bars" aria-hidden="true"><i style="--h:36%"></i><i style="--h:58%"></i><i style="--h:44%"></i><i style="--h:67%"></i><i style="--h:59%"></i><i style="--h:83%"></i><i style="--h:71%"></i><i style="--h:92%"></i><i style="--h:77%"></i><i style="--h:100%"></i><i style="--h:88%"></i><i style="--h:96%"></i></div>
         </div>
-        <p>Un parcours axé sur l’ingénierie des données, l’IA appliquée et la fiabilité des systèmes.</p>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item">
-          <div>
-            <h3>Master 1 Data — École YNOV</h3>
-            <p>Campus YNOV Aix-en-Provence</p>
-          </div>
-          <span>Octobre 2025 — Aujourd’hui</span>
-        </article>
-        <article class="timeline-item">
-          <div>
-            <h3>Master Fiabilité et sécurité informatique — Université Aix-Marseille</h3>
-            <p>Université Aix-Marseille</p>
-          </div>
-          <span>2023 — 2025</span>
-        </article>
+        <div class="visual-foot"><span>PYTHON · SQL · AIRFLOW</span><span>CASE STUDY 01</span></div>
       </div>
     </section>
 
-    <section class="section container reveal" id="contact">
-      <div class="section-head">
-        <p class="kicker">Contact</p>
-        <h2>Me contacter</h2>
+    <section class="metrics-strip" aria-label="Résultats représentatifs">
+      <div class="container metrics-grid">
+        <div class="metric-item"><strong>647<span>k</span></strong><span>Lignes analysées<br><small>Stage CRSICT</small></span></div>
+        <div class="metric-item"><strong>94,42<span>%</span></strong><span>Rappel d’un modèle ML<br><small>Validation temporelle · CRSICT</small></span></div>
+        <div class="metric-item"><strong>86<span>%</span></strong><span>Accuracy d’un modèle NLP<br><small>Analyse des avis clients</small></span></div>
+        <div class="metric-item"><strong>16</strong><span>Fichiers CSV intégrés<br><small>Pipeline de données · CRSICT</small></span></div>
       </div>
+    </section>
 
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:yakoubialla@gmail.com">
-          <span>Email</span>
-          <strong>yakoubialla@gmail.com</strong>
-        </a>
-        <a class="contact-card" href="https://github.com/lolo150?tab=repositories" target="_blank" rel="noopener noreferrer">
-          <span>GitHub</span>
-          <strong>github.com/lolo150</strong>
-        </a>
+    <section class="section container" id="about" aria-labelledby="about-heading">
+      <div class="section-title reveal"><div><p class="kicker"><span>01</span> / LE PROFIL</p><h2 id="about-heading">À propos <span class="title-muted">de moi.</span></h2></div><span class="section-endline">L'ESSENTIEL ↘</span></div>
+      <div class="about-grid">
+        <article class="about-primary glass-card reveal"><span class="card-corner">/ WHO I AM</span><h3>J’aime construire des solutions data <span>complètes, utiles et robustes.</span></h3><p>Mon approche couvre toute la chaîne de valeur : cadrage du besoin, ingestion et préparation des données, construction de modèles, automatisation des traitements et restitution aux utilisateurs. Je travaille aussi bien sur des architectures data que sur des systèmes RAG et des interfaces métier.</p><p>Ce qui me motive : faire le lien entre <strong>ingénierie, intelligence artificielle et usages concrets</strong>, sans perdre de vue la qualité des données, l’évaluation et la maintenabilité.</p><div class="about-signature">PYTHON <span>✳</span> DATA PIPELINES <span>✳</span> IA GÉNÉRATIVE</div></article>
+        <article class="about-aside glass-card reveal"><span class="card-corner">/ CURRENT FOCUS</span><div class="focus-icon" aria-hidden="true">✳</div><h3>IA générative & automatisation</h3><p>RAG, recherche sémantique, orchestration, agents IA et applications locales avec LangChain, LangGraph, ChromaDB et Ollama.</p><a class="inline-link" href="#projects">Voir les réalisations <span>↗</span></a></article>
+        <article class="about-aside glass-card focus-card reveal"><span class="card-corner">/ NEXT CHAPTER</span><div class="focus-icon" aria-hidden="true">↗</div><h3>Un stage de 6 mois</h3><p>Je souhaite contribuer à des projets en Data Science, Data Engineering, IA générative ou automatisation, de la conception à la mise en œuvre.</p><a class="inline-link" href="#contact">Échanger sur une opportunité <span>↗</span></a></article>
       </div>
+    </section>
+
+    <section class="section section-alt" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-title reveal"><div><p class="kicker"><span>02</span> / TECH STACK</p><h2 id="skills-heading">Mon terrain <span class="title-muted">technique.</span></h2></div><p class="section-description">Des compétences couvrant le développement, les données, la modélisation, la mise en production et la restitution métier.</p></div>
+        <div class="skills-grid">
+          <article class="skill-box reveal"><div class="skill-top"><span class="skill-number">01</span><span class="skill-symbol">&lt;/&gt;</span></div><h3>Développement & bases de données</h3><p>Traitement, exploration, requêtage et intégration.</p><div class="tag-list"><span>Python</span><span>SQL</span><span>Pandas</span><span>PostgreSQL</span><span>MySQL</span><span>DuckDB</span><span>API REST</span><span>PySpark</span></div></article>
+          <article class="skill-box reveal"><div class="skill-top"><span class="skill-number">02</span><span class="skill-symbol">⌘</span></div><h3>Data Engineering</h3><p>Pipelines fiables, automatisés et traçables.</p><div class="tag-list"><span>ETL / ELT</span><span>Apache Airflow</span><span>Data Warehouse</span><span>RAW / STAGING / DWH</span><span>Orchestration</span><span>Data Quality</span></div></article>
+          <article class="skill-box reveal"><div class="skill-top"><span class="skill-number">03</span><span class="skill-symbol">✺</span></div><h3>Machine Learning & NLP</h3><p>Modélisation, validation et évaluation des résultats.</p><div class="tag-list"><span>Scikit-learn</span><span>LightGBM</span><span>PyTorch</span><span>TensorFlow</span><span>TF-IDF</span><span>MLflow</span></div></article>
+          <article class="skill-box reveal"><div class="skill-top"><span class="skill-number">04</span><span class="skill-symbol">◈</span></div><h3>IA générative & RAG</h3><p>Recherche sémantique et applications à base de LLM.</p><div class="tag-list"><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Ollama</span><span>Embeddings</span><span>LLM locaux</span></div></article>
+          <article class="skill-box reveal"><div class="skill-top"><span class="skill-number">05</span><span class="skill-symbol">▥</span></div><h3>Business Intelligence</h3><p>Indicateurs, reporting et communication des analyses.</p><div class="tag-list"><span>Power BI</span><span>Power Query</span><span>Streamlit</span><span>Plotly</span><span>Matplotlib</span><span>Qlik Sense</span><span>KPI</span></div></article>
+          <article class="skill-box reveal"><div class="skill-top"><span class="skill-number">06</span><span class="skill-symbol">◇</span></div><h3>Cloud, DevOps & collaboration</h3><p>Livraison, versionnement et travail en équipe.</p><div class="tag-list"><span>GCP</span><span>BigQuery</span><span>Cloud Storage</span><span>IAM</span><span>Azure</span><span>Docker</span><span>Git / GitLab</span><span>Jenkins</span><span>CI/CD</span><span>Agile / Scrum</span><span>Jira</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="experience" aria-labelledby="experience-heading">
+      <div class="section-title reveal"><div><p class="kicker"><span>03</span> / PROFESSIONAL JOURNEY</p><h2 id="experience-heading">Expériences <span class="title-muted">professionnelles.</span></h2></div><p class="section-description">Des missions concrètes, de l’intégration SQL aux pipelines ML et aux solutions d’IA appliquée.</p></div>
+      <div class="experience-list">
+        <article class="experience-item reveal"><div class="xp-date"><span>2026 — EN COURS</span><span class="xp-index">01 / 03</span></div><div class="xp-main"><div class="xp-heading"><div><p class="xp-org">Association des Donneurs de Voix · Bibliothèques Sonores de Marseille</p><h3>Développeur IA — Plateforme intelligente de livres audio</h3></div><span class="status-pill"><span></span> En cours</span></div><p class="xp-intro">Conception d’une application destinée à rendre les livres plus accessibles aux personnes en situation de handicap ou rencontrant des difficultés de lecture.</p><ul class="xp-points"><li>Développement d’une chaîne documentaire associant extraction de PDF, NLP, OCR et synthèse vocale (TTS), avec génération de voix naturelles et personnalisables.</li><li>Conception du pipeline ETL/ELT pour l’ingestion, le traitement, le stockage et l’orchestration de données bibliographiques.</li><li>Développement d’un moteur de recommandation fondé sur les préférences et la similarité sémantique par embeddings.</li><li>Optimisation de la chaîne documentaire/audio, interface accessible, tests et documentation ; étude d’une approche multi-personnages avec des voix distinctes.</li></ul><p class="xp-objective">Objectif du projet : produire un livre audio en moins de 24 heures.</p><div class="tag-list"><span>Python</span><span>NLP</span><span>OCR</span><span>TTS</span><span>SQL</span><span>Airflow</span><span>Docker</span></div></div></article>
+        <article class="experience-item reveal"><div class="xp-date"><span>JUIN — AOÛT 2026</span><span class="xp-index">02 / 03</span></div><div class="xp-main"><div class="xp-heading"><div><p class="xp-org">CRSICT · Stage Data Scientist / Data Engineer</p><h3>Modélisation prédictive & fiabilisation des données</h3></div><span class="xp-highlight">94,42 % de rappel</span></div><p class="xp-intro">Construction d’une solution data de bout en bout pour identifier des facteurs de risque et rendre les résultats exploitables par les équipes métier.</p><ul class="xp-points"><li>Analyse exploratoire d’environ <strong>647 000 lignes issues de 16 CSV</strong> : notes, assiduité et devoirs.</li><li>Comparaison de modèles (régression logistique, Random Forest, LightGBM) avec validation temporelle ; <strong>94,42 % de rappel à T1_NOV</strong>.</li><li>Développement de pipelines Python/SQL orchestrés avec Airflow dans une architecture <strong>RAW → STAGING → Data Warehouse PostgreSQL</strong>.</li><li>Contrôles qualité et tests automatisés ; usage de GCP Cloud Storage/IAM ; tableaux de bord Streamlit, Plotly et Power BI pour les interlocuteurs métier.</li></ul><div class="tag-list"><span>Python</span><span>LightGBM</span><span>PostgreSQL</span><span>Airflow</span><span>GCP</span><span>Streamlit</span><span>Power BI</span></div></div></article>
+        <article class="experience-item reveal"><div class="xp-date"><span>2021 — 2023</span><span class="xp-index">03 / 03</span></div><div class="xp-main"><div class="xp-heading"><div><p class="xp-org">BIG INFORMATIQUE</p><h3>Développeur Data — Intégration, SQL & automatisation</h3></div></div><p class="xp-intro">Contribution à l’évolution des traitements de données et à leur adaptation aux processus opérationnels des utilisateurs.</p><ul class="xp-points"><li>Recueil des besoins et participation à l’intégration des données.</li><li>Développement et optimisation de requêtes SQL : filtres, jointures et indexation.</li><li>Automatisation de contrôles qualité et de tâches récurrentes, documentation des flux et suivi avec les utilisateurs.</li><li>Travail collaboratif en méthode Agile, gestion de versions Git, pratiques CI/CD et validation des livrables.</li></ul><div class="tag-list"><span>SQL</span><span>Optimisation</span><span>Git</span><span>CI/CD</span><span>Agile</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-title reveal"><div><p class="kicker"><span>04</span> / SELECTED WORK</p><h2 id="projects-heading">Projets <span class="title-muted">sélectionnés.</span></h2></div><p class="section-description">Une sélection de travaux en IA, machine learning, NLP, data engineering et analytics.</p></div>
+        <div class="project-toolbar reveal">
+          <div class="filter-buttons" role="group" aria-label="Filtrer les projets">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true" type="button">Tous</button>
+            <button class="filter-btn" data-filter="genai" aria-pressed="false" type="button">IA & RAG</button>
+            <button class="filter-btn" data-filter="ml" aria-pressed="false" type="button">ML & NLP</button>
+            <button class="filter-btn" data-filter="engineering" aria-pressed="false" type="button">Data Engineering</button>
+            <button class="filter-btn" data-filter="analytics" aria-pressed="false" type="button">Analytics</button>
+          </div>
+          <label class="search-wrapper"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sr-only">Rechercher un projet</span><input id="projectSearch" type="search" autocomplete="off" placeholder="Rechercher un projet…"></label>
+        </div>
+        <p class="project-count" id="projectCount" role="status" aria-live="polite"></p>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card project-featured reveal" data-category="genai engineering" data-search="rag llm agent offres emploi cv python embeddings chromadb langchain langgraph ollama streamlit matching recherche semantique">
+            <div class="project-visual visual-rag"><div class="visual-label">FEATURED PROJECT / 001</div><div class="rag-network" aria-hidden="true"><div class="rag-block rag-resume">CV<span>PDF</span></div><div class="rag-connector"></div><div class="rag-block rag-core">RAG<span>LLM</span></div><div class="rag-connector"></div><div class="rag-block rag-offer">OFFRE<span>MATCH</span></div></div><div class="visual-tech">VECTOR SEARCH • LOCAL AI</div></div>
+            <div class="project-info"><div class="project-top"><span class="project-kind">IA GÉNÉRATIVE · 2026</span><span class="project-counter">01 / 07</span></div><h3>Agent IA de matching CV / offres avec RAG</h3><p>Une application intelligente qui rapproche les CV et les offres d’emploi via extraction documentaire, embeddings, recherche sémantique et LLM local. Scoring et interprétation dans Streamlit.</p><div class="tag-list"><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Ollama</span><span>Streamlit</span></div><button class="project-open" type="button" data-open-project>Découvrir le projet <span aria-hidden="true">↗</span></button></div>
+            <div class="project-details" hidden><p>Prototype d’IA générative conçu pour analyser automatiquement CV et offres d’emploi, identifier des correspondances contextualisées et expliciter les résultats.</p><h4>Architecture et réalisation</h4><ul><li>Extraction et préparation des documents, segmentation, génération d’embeddings et indexation vectorielle dans ChromaDB.</li><li>Orchestration des étapes de récupération et de génération avec LangChain et LangGraph ; intégration d’un LLM local via Ollama.</li><li>Combinaison de scores de similarité et d’analyses produites par le LLM ; évaluation de la pertinence et examen des justifications.</li><li>Interface Streamlit pour consulter les scores, explorer les correspondances et interroger les CV en langage naturel.</li></ul></div>
+          </article>
+
+          <article class="project-card reveal" data-category="ml engineering analytics" data-search="crsict stage 647000 16 csv lightgbm data warehouse postgresql airflow gcp dashboard risque etudiant python prediction 94 42">
+            <div class="project-visual visual-ml"><div class="visual-label">MACHINE LEARNING / 002</div><div class="project-big-number">94,42<span>%</span></div><div class="project-number-caption">RAPPEL · VALIDATION TEMPORELLE</div><div class="visual-tech">647K RECORDS · 16 SOURCES CSV</div></div>
+            <div class="project-info"><div class="project-top"><span class="project-kind">ML + DATA ENGINEERING · 2026</span><span class="project-counter">02 / 07</span></div><h3>CRSICT — Pipeline data & scoring prédictif</h3><p>Exploration de 647 000 lignes, modèles prédictifs et pipeline RAW → STAGING → DWH sous PostgreSQL, orchestré avec Airflow et restitué dans des dashboards.</p><div class="tag-list"><span>LightGBM</span><span>Airflow</span><span>SQL</span><span>GCP</span><span>Power BI</span></div><button class="project-open" type="button" data-open-project>Découvrir le projet <span aria-hidden="true">↗</span></button></div>
+            <div class="project-details" hidden><p>Projet mené pendant le stage CRSICT, de l’exploration des données jusqu’à la restitution métier.</p><h4>Pipeline et résultats</h4><ul><li>Analyse de 16 jeux CSV (~647 000 lignes) portant sur les notes, la présence et les devoirs.</li><li>Comparaison régression logistique, Random Forest et LightGBM avec validation temporelle.</li><li>Rappel de 94,42 % mesuré au jalon T1_NOV, sans extrapolation à d’autres jalons.</li><li>Pipelines Python/SQL, automatisation Airflow, stockage GCP, droits IAM, contrôles qualité et dashboards Streamlit/Plotly et Power BI.</li></ul></div>
+          </article>
+
+          <article class="project-card reveal" data-category="genai engineering" data-search="livres audio donneurs de voix marseille pdf nlp ocr tts synthese vocale recommandations embeddings accessibilite airflow docker en cours">
+            <div class="project-visual visual-audio"><div class="visual-label">ACCESSIBLE AI / 003</div><div class="audio-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="visual-tech">PDF → NLP → TTS · EN COURS</div></div>
+            <div class="project-info"><div class="project-top"><span class="project-kind">IA APPLIQUÉE · 2026 — EN COURS</span><span class="project-counter">03 / 07</span></div><h3>Plateforme intelligente de livres audio</h3><p>Application d’accessibilité associant traitement documentaire, synthèse vocale et recommandation sémantique pour les Bibliothèques Sonores de Marseille.</p><div class="tag-list"><span>Python</span><span>NLP / OCR</span><span>TTS</span><span>Airflow</span><span>Embeddings</span></div><button class="project-open" type="button" data-open-project>Découvrir le projet <span aria-hidden="true">↗</span></button></div>
+            <div class="project-details" hidden><p>Projet en cours pour l’Association des Donneurs de Voix, afin de convertir des documents PDF en livres audio accessibles.</p><h4>Fonctionnalités en conception et développement</h4><ul><li>Extraction et nettoyage des textes PDF, traitement NLP et OCR pour les documents qui le nécessitent.</li><li>Synthèse vocale TTS, avec objectif de voix naturelles et personnalisables.</li><li>Flux ETL/ELT de données bibliographiques et recommandation basée sur les préférences et la similarité sémantique.</li><li>Étude d’un traitement des dialogues à voix multiples et d’une interface accessible ; objectif de production en moins de 24 h.</li></ul><p><strong>Statut :</strong> développement en cours ; les fonctionnalités étudiées et l’objectif de délai ne sont pas présentés comme déjà atteints.</p></div>
+          </article>
+
+          <article class="project-card reveal" data-category="ml analytics" data-search="nlp avis clients classification sentiment recommandation ecommerce tfidf power bi 86 f1 0 84 70">
+            <div class="project-visual visual-nlp"><div class="visual-label">NATURAL LANGUAGE / 004</div><div class="nlp-visual"><span>POSITIVE</span><span class="nlp-score">86<small>%</small></span><span>ACCURACY</span></div><div class="visual-tech">TF-IDF · CLASSIFICATION · RECO</div></div>
+            <div class="project-info"><div class="project-top"><span class="project-kind">NLP + ANALYTICS · MAI 2025</span><span class="project-counter">04 / 07</span></div><h3>E-commerce intelligent — NLP & recommandations</h3><p>Pipeline d’analyse des avis clients, classification de sentiment et recommandation par similarité textuelle. <strong>86 % d’accuracy</strong> et <strong>F1-score de 0,84</strong>.</p><div class="tag-list"><span>Python</span><span>Scikit-learn</span><span>TF-IDF</span><span>Power BI</span></div><button class="project-open" type="button" data-open-project>Découvrir le projet <span aria-hidden="true">↗</span></button></div>
+            <div class="project-details" hidden><p>Projet NLP et application e-commerce pour comprendre les retours clients et améliorer la recommandation des produits.</p><h4>Démarche et mesures</h4><ul><li>Collecte, nettoyage et structuration des avis textuels.</li><li>Extraction TF-IDF, comparaison de plusieurs modèles de classification et analyse des erreurs.</li><li>Performance mesurée : 86 % d’accuracy et F1-score de 0,84.</li><li>Recommandation par similarité textuelle (~70 % de pertinence estimée dans le projet) et reporting Power BI.</li></ul></div>
+          </article>
+
+          <article class="project-card reveal" data-category="ml" data-search="house prices kaggle regression prix maisons python pandas ridge random forest xgboost k fold target encoding rmse">
+            <div class="project-visual visual-house"><div class="visual-label">PREDICTIVE MODELING / 005</div><div class="house-icon" aria-hidden="true"><svg viewBox="0 0 180 136" fill="none"><path d="M15 70 90 15l75 55v55H15V70Z" stroke="currentColor" stroke-width="2"/><path d="M62 125V81h56v44M42 67h25m46 0h25" stroke="currentColor" stroke-width="2"/><path d="M15 105h150" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 7"/></svg></div><div class="visual-tech">FEATURE ENGINEERING · REGRESSION</div></div>
+            <div class="project-info"><div class="project-top"><span class="project-kind">MACHINE LEARNING · KAGGLE</span><span class="project-counter">05 / 07</span></div><h3>House Prices — Prédiction de prix immobiliers</h3><p>Analyse exploratoire, gestion des valeurs manquantes, encodage K-Fold et comparaison de modèles de régression pour prédire la valeur de maisons.</p><div class="tag-list"><span>Ridge</span><span>Random Forest</span><span>XGBoost</span><span>K-Fold</span></div><button class="project-open" type="button" data-open-project>Découvrir le projet <span aria-hidden="true">↗</span></button></div>
+            <div class="project-details" hidden><p>Projet issu de la compétition Kaggle House Prices.</p><h4>Étapes du projet</h4><ul><li>EDA, étude de SalePrice et des variables explicatives, contrôle des valeurs manquantes, doublons et valeurs extrêmes.</li><li>Préparation des variables, K-Fold Target Encoding et standardisation pour les modèles pertinents.</li><li>Entraînement et comparaison Ridge, Random Forest et XGBoost.</li><li>Évaluation par RMSE logarithmique et production du fichier de soumission pour Kaggle.</li></ul></div>
+          </article>
+
+          <article class="project-card reveal" data-category="ml analytics engineering" data-search="jo jeux olympiques 2028 prediction performance athletes scoring snowflake dashboard en cours ynov sportive">
+            <div class="project-visual visual-sports"><div class="visual-label">SPORTS ANALYTICS / 006</div><div class="sports-year">20<span>28</span></div><div class="visual-tech">SCORING · SNOWFLAKE · DASHBOARD</div></div>
+            <div class="project-info"><div class="project-top"><span class="project-kind">SPORTS ANALYTICS · EN COURS</span><span class="project-counter">06 / 07</span></div><h3>JO 2028 — Scoring des performances sportives</h3><p>Projet de prédiction du potentiel des athlètes et de leur probabilité de médaille, avec centralisation des données olympiques et visualisations interactives.</p><div class="tag-list"><span>Python</span><span>Snowflake</span><span>Machine Learning</span><span>BI</span></div><button class="project-open" type="button" data-open-project>Découvrir le projet <span aria-hidden="true">↗</span></button></div>
+            <div class="project-details" hidden><p>Projet en cours à YNOV Aix-en-Provence.</p><h4>Travaux prévus / en cours</h4><ul><li>Collecte et centralisation des données olympiques dans Snowflake.</li><li>Préparation de jeux de données et construction de modèles prédictifs de performances.</li><li>Création de dashboards par pays, discipline et genre.</li></ul><p>Les prévisions de médailles ne sont pas présentées ici comme des résultats validés.</p></div>
+          </article>
+
+          <article class="project-card reveal" data-category="engineering analytics" data-search="hackathon pipeline big data sante publique etl streamlit kpi docker visualisation 2025">
+            <div class="project-visual visual-hack"><div class="visual-label">HACKATHON / 007</div><div class="hack-graphic" aria-hidden="true"><span>DATA</span><span class="hack-cross">+</span><span>IMPACT</span></div><div class="visual-tech">ETL · KPI · HEALTH DATA</div></div>
+            <div class="project-info"><div class="project-top"><span class="project-kind">DATA ENGINEERING · OCT. 2025</span><span class="project-counter">07 / 07</span></div><h3>Hackathon Big Data — Santé publique</h3><p>Intégration, fiabilisation et visualisation de données de santé publique : pipeline multi-sources et tableau de bord interactif pour suivre les KPI.</p><div class="tag-list"><span>ETL</span><span>Docker</span><span>Streamlit</span><span>KPI</span></div><button class="project-open" type="button" data-open-project>Découvrir le projet <span aria-hidden="true">↗</span></button></div>
+            <div class="project-details" hidden><p>Projet réalisé lors d’un hackathon YNOV à Aix-en-Provence en octobre 2025.</p><h4>Travaux réalisés</h4><ul><li>Conception d’un pipeline de traitement de données volumineuses et multi-sources.</li><li>Nettoyage, harmonisation, validation et consolidation des données.</li><li>Définition de KPI de santé publique et développement d’un dashboard Streamlit pour la lecture temporelle et territoriale.</li></ul></div>
+          </article>
+        </div>
+        <p class="empty-projects" id="noProjects" hidden>Aucun projet ne correspond à cette recherche. Essayez un autre mot-clé ou une autre catégorie.</p>
+        <div class="projects-bottom reveal"><p>Vous voulez voir d’autres réalisations ou consulter le code ?</p><a class="text-link" href="https://github.com/lolo150?tab=repositories" target="_blank" rel="noopener noreferrer">Explorer mon GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="section container education-section" id="education" aria-labelledby="education-heading">
+      <div class="section-title reveal"><div><p class="kicker"><span>05</span> / EDUCATION</p><h2 id="education-heading">Formation <span class="title-muted">& approche.</span></h2></div></div>
+      <div class="education-grid">
+        <div class="education-stack">
+          <article class="education-card glass-card reveal"><div class="edu-year">2026 — 2027</div><h3>Master 2 Data & IA</h3><p>YNOV Campus · Aix-en-Provence</p><span>Data Science · IA appliquée · Data Engineering</span></article>
+          <article class="education-card glass-card reveal"><div class="edu-year">2023 — 2025</div><h3>Master Fiabilité et Sécurité Informatique</h3><p>Aix-Marseille Université</p><span>Fiabilité des systèmes · Sécurité informatique</span></article>
+        </div>
+        <div class="values-card glass-card reveal"><span class="card-corner">/ HOW I WORK</span><h3>Construire.<br><span>Tester.</span><br>Transmettre.</h3><p>Je privilégie la rigueur, les tests automatisés, la traçabilité et une communication claire des résultats. Mon objectif est de livrer des solutions que les équipes comprennent et peuvent utiliser.</p><div class="language-row"><span>LANGUES</span><strong>Français courant</strong><strong>Anglais B2</strong></div></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner reveal"><p class="kicker"><span>06</span> / LET'S CONNECT</p><div class="contact-head"><h2 id="contact-heading">Construisons <span>la suite.</span></h2><span class="contact-star" aria-hidden="true">✳</span></div><p class="contact-subtitle">Une opportunité de stage de fin d’études, un projet IA ou une idée à explorer ? Discutons-en.</p><div class="contact-actions"><a class="btn btn-primary btn-large" href="mailto:yakoubialla@gmail.com?subject=Contact%20-%20Portfolio%20Ala%20Eddine%20Yakoubi">Écrivez-moi <span aria-hidden="true">↗</span></a><button class="btn btn-ghost" id="copyEmail" type="button">Copier l’adresse e-mail <span aria-hidden="true">⧉</span></button></div><div class="contact-bottom"><a href="mailto:yakoubialla@gmail.com">yakoubialla@gmail.com</a><div><a href="https://www.linkedin.com/in/ala-eddine-yakoubi-875544259/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><a href="https://github.com/lolo150?tab=repositories" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div></div><p class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></p></div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> YAKOUBI ALA EDDINE — Portfolio Data Science & Data Engineering</p>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year">2026</span> ALA EDDINE YAKOUBI</p><span>DATA • INTELLIGENCE • IMPACT</span><a href="#home">Retour en haut ↑</a></div></footer>
 
-  <div class="project-modal" id="projectModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" type="button" aria-label="Fermer" data-close-modal>×</button>
-      <p class="kicker">Détails du projet</p>
-      <h3 id="modalTitle"></h3>
-      <div class="modal-content" id="modalContent"></div>
-    </div>
-  </div>
-
+  <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle"><div class="dialog-head"><div><span class="kicker">/ PROJECT DEEP DIVE</span><h2 id="dialogTitle"></h2></div><button class="dialog-close" id="dialogClose" type="button" aria-label="Fermer les détails">×</button></div><div class="dialog-body" id="dialogBody"></div><div class="dialog-foot"><span>ALA EDDINE YAKOUBI / PROJECTS</span><button class="dialog-dismiss" id="dialogDismiss" type="button">Fermer ↗</button></div></dialog>
 </body>
 </html>
